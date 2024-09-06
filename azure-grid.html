@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: rgb(5, 5, 5);
+    }
+
+    h1,
+    h2,
+    h3,
+    button,
+    a,
+    span {
+      font-family: "Poppins", sans-serif;
+    }
+  
+    h1 {
+      font-size: 3rem;
+      color: antiquewhite;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    h3 {
+      color: rgb(62, 62, 62);
+      font-size: 1rem;
+    }
+    
+    .span {
+      color: rgb(78, 78, 78);;
+      font-size: 0.9rem;
+    }
+
+    a {
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: rgb(90, 150, 180);;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 300px 300px 300px 300px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      justify-content: center;
+      height: 250px;
+      box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.5);
+      background-color: antiquewhite;
+      border-radius: 10px;
+      padding: 20px;
+      transition-duration: 100ms;
+    }
+
+    .card:hover {
+      background-color: rgb(241, 219, 191);
+      transition-duration: 100ms;
+    }
+
+    .card-big {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url("https://img.freepik.com/premium-vector/3d-abstract-vector-background_1255286-66.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: auto;
+      grid-column: 1;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      gap: 20px;
+      transition-duration: 200ms;
+    }
+
+    .card-text {
+      color: rgb(203, 230, 244);
+      font-size: 0.9rem;
+    }
+
+    .card-icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .azure {
+      font-size: 3.3rem;
+      color: rgb(136, 179, 201);
+    }
+
+    .button {
+      font-weight: 500;
+      padding: 18px 15px;
+      background-color: rgb(203, 230, 244);
+      border: none;
+      border-radius: 10px;
+      max-width: max-content;
+    }
+
+    .container {
+      filter: drop-shadow(10px 10px 200px rgba(250, 235, 215, 0.100));
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition-duration: 200ms;
+    }
+
+    .container:hover {
+      transition-duration: 200ms;
+      filter: drop-shadow(10px 10px 200px rgba(250, 235, 215, 0.200));
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Try <span class="azure">Azure</span> now</h1>
+    <div class="grid">
+      <div class="card card-big">
+        <div>
+          <h2>Seguridad de contenido de Azure AI</h2>
+          <span class="card-text">Usa la IA para supervisar el contenido de texto e imagen por motivos de seguridad.</span>
+        </div>
+        <button class="button">Explora el producto</button>
+      </div>
+  
+      <div class="card">
+        <div>
+          <img class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png"/>
+        </div>
+
+        <div>
+          <h3>Estudio de IA de Azure</h3>
+          <span class="span">Crea, evalúa e implementa soluciones de IA generativa y copilotos personalizados.</span>
+        </div>
+
+        <div>
+          <a href="https://azure.microsoft.com/es-es/#:~:text=la%20b%C3%BAsqueda%20moderna.-,Explorar%20el%20producto,-GitHub%20Advanced%20Security">Explorar el producto</a>
+        </div>
+      </div>
+  
+      <div class="card">
+        <div>
+          <img class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png"/>
+        </div>
+
+        <div>
+          <h3>Estudio de IA de Azure</h3>
+          <span class="span">Crea, evalúa e implementa soluciones de IA generativa y copilotos personalizados.</span>
+        </div>
+
+        <div>
+          <a href="https://azure.microsoft.com/es-es/#:~:text=la%20b%C3%BAsqueda%20moderna.-,Explorar%20el%20producto,-GitHub%20Advanced%20Security">Explorar el producto</a>
+        </div>
+      </div>
+  
+      <div class="card">
+        <div>
+          <img class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png"/>
+        </div>
+
+        <div>
+          <h3>Estudio de IA de Azure</h3>
+          <span class="span">Crea, evalúa e implementa soluciones de IA generativa y copilotos personalizados.</span>
+        </div>
+
+        <div>
+          <a href="https://azure.microsoft.com/es-es/#:~:text=la%20b%C3%BAsqueda%20moderna.-,Explorar%20el%20producto,-GitHub%20Advanced%20Security">Explorar el producto</a>
+        </div>
+      </div>
+  
+      <div class="card">
+        <div>
+          <img class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png"/>
+        </div>
+
+        <div>
+          <h3>Estudio de IA de Azure</h3>
+          <span class="span">Crea, evalúa e implementa soluciones de IA generativa y copilotos personalizados.</span>
+        </div>
+
+        <div>
+          <a href="https://azure.microsoft.com/es-es/#:~:text=la%20b%C3%BAsqueda%20moderna.-,Explorar%20el%20producto,-GitHub%20Advanced%20Security">Explorar el producto</a>
+        </div>
+      </div>
+  
+      <div class="card">
+        <div>
+          <img class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png"/>
+        </div>
+
+        <div>
+          <h3>Estudio de IA de Azure</h3>
+          <span class="span">Crea, evalúa e implementa soluciones de IA generativa y copilotos personalizados.</span>
+        </div>
+
+        <div>
+          <a href="https://azure.microsoft.com/es-es/#:~:text=la%20b%C3%BAsqueda%20moderna.-,Explorar%20el%20producto,-GitHub%20Advanced%20Security">Explorar el producto</a>
+        </div>
+      </div>
+  
+      <div class="card">
+        <div>
+          <img class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png"/>
+        </div>
+
+        <div>
+          <h3>Estudio de IA de Azure</h3>
+          <span class="span">Crea, evalúa e implementa soluciones de IA generativa y copilotos personalizados.</span>
+        </div>
+
+        <div>
+          <a href="https://azure.microsoft.com/es-es/#:~:text=la%20b%C3%BAsqueda%20moderna.-,Explorar%20el%20producto,-GitHub%20Advanced%20Security">Explorar el producto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
